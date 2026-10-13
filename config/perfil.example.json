@@ -1,0 +1,28 @@
+{
+  "nombre": "Soluciones TI del Caribe S.A.S. (ejemplo)",
+  "sector": "Tecnología de la información",
+  "tamano": "pequeña",
+  "palabrasClave": [
+    "software",
+    "desarrollo de aplicaciones",
+    "sistemas de información",
+    "plataforma web",
+    "soporte tecnológico"
+  ],
+  "palabrasExcluir": [
+    "obra civil",
+    "construcción",
+    "dotación hospitalaria"
+  ],
+  "departamentos": ["Bogotá D.C.", "Cundinamarca", "Antioquia", "Valle del Cauca"],
+  "presupuestoMinCOP": 20000000,
+  "presupuestoMaxCOP": 800000000,
+  "experienciaAnios": 4,
+  "contratosPreviosCOP": 450000000,
+  "capacidadFinancieraCOP": 600000000,
+  "modalidadesPreferidas": [
+    "Selección abreviada de menor cuantía",
+    "Mínima cuantía",
+    "Contratación directa"
+  ]
+}

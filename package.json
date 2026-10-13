@@ -1,0 +1,24 @@
+{
+  "name": "radar-secop",
+  "version": "0.1.0",
+  "description": "Agente autónomo que encuentra oportunidades de contratación en SECOP II para pymes colombianas, corriendo sobre Grok.",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "start:secop": "tsx src/index.ts --solo-secop",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "openai": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
