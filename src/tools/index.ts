@@ -17,6 +17,13 @@ function normalizar(s: string): string {
   return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 }
 
+function claveDepartamento(s: string): string {
+  return normalizar(s)
+    .replace(/distrito capital de|departamento del?|\bd\.?\s?c\b\.?/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function cop(n: number | null): string {
   return n == null ? "desconocido" : `$${Math.round(n).toLocaleString("es-CO")} COP`;
 }
@@ -117,7 +124,7 @@ export function crearHerramientas(perfil: Perfil): Herramienta[] {
           razones.push(`presupuesto ${cop(p.precioBaseCOP)} fuera del rango`);
         }
 
-        if (perfil.departamentos.some((d) => normalizar(d) === normalizar(p.departamento))) {
+        if (perfil.departamentos.some((d) => claveDepartamento(d) === claveDepartamento(p.departamento))) {
           puntaje += 20;
           razones.push(`departamento ${p.departamento} cubierto`);
         } else {
